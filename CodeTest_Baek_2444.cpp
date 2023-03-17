@@ -45,8 +45,37 @@ using namespace std;
 
 */
 
-int main(){
-    
-    
-    return 0; 
-}
+int main()
+{
+    int n;
+    int star = 1;
+
+        cin>>n;
+        int blank = n-1; 
+        
+        
+        for(int i =0; i<n;i++){
+            for(int k=0; k<blank; k++){cout << " ";}
+            blank--;
+            for(int j=0; j<star; j++){ cout <<"*";}
+            cout<<endl;
+            star = star+2;  
+        }
+        
+        
+        star-=4;
+        blank=0;
+        
+        
+        for(int i=1; i<n; i++){
+            for(int k=-1;k<blank;k++){cout<<" ";}
+            blank++;
+            for(int j=0; j<star; j++){cout<<"*";}
+            cout<<endl;
+            star-=2;
+        }
+        
+        
+            return 0; 
+
+    }
